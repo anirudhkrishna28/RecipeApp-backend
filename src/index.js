@@ -15,7 +15,7 @@ app.use("/auth",userRouter);
 app.use("/recipes",recipesRouter);
 
 
-const port  = 3001;
+const port  = process.env.PORT | 5000;
 const url = 'mongodb+srv://anikrish2804:anirudh2804@recipes.lrn1itb.mongodb.net/recipes';
 mongoose.connect(url, { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => {
